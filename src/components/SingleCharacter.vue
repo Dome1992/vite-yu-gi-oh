@@ -6,7 +6,14 @@ export default {
 </script>
 
 <template>
-    
+    <div class="character text-center">
+        <img class="img-fluid mb-3"  src="https://images.ygoprodeck.com/images/cards/27551.jpg" alt="descrizione del personaggio">
+        <h4>Nome personaggio</h4>
+        <div>status personaggio</div>
+        <div class="font-weight-bold">
+            Specie personaggio
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -25,7 +32,7 @@ h4 {
 }
 
 img {
-    border-radius: 50%;
+    
     
 }
 </style>
