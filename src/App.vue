@@ -1,10 +1,12 @@
-<script setup>
+<script>
 import AppHeader from './components/AppHeader.vue'
+import CharactersList from './components/CharactersList.vue'
 
 export default {
-  components: {
-    AppHeader
-  }
+    components: {
+      AppHeader,
+      CharactersList
+    }
 }
 </script>
 
@@ -12,7 +14,7 @@ export default {
   <AppHeader />
 
   <main>
-
+      <CharactersList />
   </main>
 </template>
 

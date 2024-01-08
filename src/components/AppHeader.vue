@@ -8,7 +8,7 @@ export default {
 <template>
     <header class="container">
 
-        <h1 class ="text-center my-5">Titolo Header</h1>
+        <h1 class ="text-center my-5">Yu-Gi-Oh API</h1>
     </header>
 </template>
 
