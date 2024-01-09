@@ -5,6 +5,7 @@ import axios from 'axios'
 // importo componente figlio
 import AppHeader from './components/AppHeader.vue'
 import CharactersList from './components/CharactersList.vue'
+import AppSearch from './components/AppSearch.vue'
 
 //importo Store
 import { store } from './store';
@@ -12,7 +13,8 @@ import { store } from './store';
 export default {
     components: {
       AppHeader,
-      CharactersList
+      CharactersList,
+      AppSearch
     },
     data () {
       return {
@@ -20,7 +22,11 @@ export default {
       }
     },
     methods: {
+      // Metodo per ottenere i personaggi dalla chiamata API
       getCharacters (){
+        
+
+
         axios
           .get(store.apiURL)
           .then((res => {
@@ -42,6 +48,7 @@ export default {
   <AppHeader />
 
   <main>
+      <AppSearch />
       <CharactersList />
   </main>
 </template>
