@@ -1,18 +1,19 @@
 <script>
 export default {
     name: 'SingleCharacter',
+    props: {
+        info: Object
+    }
 }
 
 </script>
 
 <template>
     <div class="character text-center">
-        <img class="img-fluid mb-3"  src="https://images.ygoprodeck.com/images/cards/27551.jpg" alt="descrizione del personaggio">
-        <h4>Nome personaggio</h4>
-        <div>status personaggio</div>
-        <div class="font-weight-bold">
-            Specie personaggio
-        </div>
+        <img class="img-fluid mb-3"  :src="info.card_images[0].image_url" :alt="info.name">
+        <h4>{{ info.name }}</h4>
+        <div>{{ info.archetype }}</div>
+        
     </div>
 </template>
 
