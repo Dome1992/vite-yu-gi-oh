@@ -36,10 +36,23 @@ export default {
           .catch((err)=>{
             console.log("Errori", err);
           })
-      }
+      },
+      // Ottieni archetipi 
+      getArchetypeCard() {
+        axios
+        .get((store.archetypeURL)
+        .then(res => {
+          store.archetypes = res.data;
+        }))
+        .catch((err)=>{
+          console.log("Errori", err);
+        })
+      },
     },
     created () {
         this.getCharacters ();
+        this.getArchetypeCard ();
+
     }
 }
 </script>
@@ -48,7 +61,7 @@ export default {
   <AppHeader />
 
   <main>
-      <AppSearch />
+      <AppSearch @filter ="getCharacters" />
       <CharactersList />
   </main>
 </template>
