@@ -15,7 +15,7 @@ export default {
 <template>
   <!-- Aggiungi un menu a discesa per selezionare l'archetipo -->
   <!-- Aggiungiamo il v-model al select cosi' da collegarli-->
-        <select class="form-select" aria-label="Default select example" v-model="store.searcharchetype" @change="$emit('filter')">
+        <select class="form-select" aria-label="Default select example" v-model="store.searcharchetype" @change="$emit('filter', store.searcharchetype)">
             <!--Aggiungiamo il v-for all'option di partenza cosi' itera le card filtrate-->
             <option value="">Archetype</option>
             <option v-for="archetype in store.archetypes"   :value="archetype.archetype_name">

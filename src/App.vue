@@ -25,8 +25,6 @@ export default {
       // Metodo per ottenere i personaggi dalla chiamata API
       getCharacters (){
         
-
-
         axios
           .get(store.apiURL)
           .then((res => {
@@ -37,18 +35,21 @@ export default {
             console.log("Errori", err);
           })
       },
+
       // Ottieni archetipi 
       getArchetypeCard() {
+
         axios
-        .get((store.archetypeURL)
+        .get(store.archetypeURL)
         .then(res => {
           store.archetypes = res.data;
-        }))
+        })
         .catch((err)=>{
           console.log("Errori", err);
         })
       },
     },
+
     created () {
         this.getCharacters ();
         this.getArchetypeCard ();
@@ -61,7 +62,7 @@ export default {
   <AppHeader />
 
   <main>
-      <AppSearch @filter ="getCharacters" />
+      <AppSearch @filter="getCharacters" />
       <CharactersList />
   </main>
 </template>
